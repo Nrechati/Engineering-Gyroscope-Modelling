@@ -1,0 +1,1224 @@
+Library {
+  Name			  "library_gyro"
+  Version		  4.00
+  LibraryLinkDisplay	  "none"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  off
+  StatusBar		  off
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed Mar 20 15:24:17 2002"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Alex"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sun Apr 28 21:33:34 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:71>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "Solver"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWRetainRTWFile	  off
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "library_gyro"
+    Location		    [780, 252, 1421, 751]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Gyro linéaire"
+      Ports		      [4, 1]
+      Position		      [275, 61, 395, 309]
+      BackgroundColor	      "lightBlue"
+      ShowPortLabels	      on
+      Permissions	      "ReadOnly"
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Gyro linéaire"
+	Location		[253, 441, 1053, 863]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "T1 (V)"
+	  Position		  [50, 63, 80, 77]
+	  Port			  "1"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T2 (V)"
+	  Position		  [50, 148, 80, 162]
+	  Port			  "2"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T3 (N.m)"
+	  Position		  [50, 233, 80, 247]
+	  Port			  "3"
+	  LatchInput		  off
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "T3"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T4 (N.m)"
+	  Position		  [50, 318, 80, 332]
+	  Port			  "4"
+	  LatchInput		  off
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "T4"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain \nAmpli1\n en A/V"
+	  Position		  [140, 50, 190, 90]
+	  BackgroundColor	  "lightBlue"
+	  Gain			  "Kamp"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain \nAmpli2 \nen A/V"
+	  Position		  [140, 135, 190, 175]
+	  BackgroundColor	  "lightBlue"
+	  Gain			  "Kamp"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gains\ncapteurs\nrad -> counts"
+	  Position		  [520, 181, 565, 219]
+	  BackgroundColor	  "lightBlue"
+	  Gain			  "[K1 K2 K3 K4 K1 K2 K3 K4]"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  StateSpace
+	  Name			  "Gyro\nState-Space"
+	  Position		  [415, 170, 495, 230]
+	  BackgroundColor	  "lightBlue"
+	  A			  "A"
+	  B			  "B"
+	  C			  "C"
+	  D			  "D"
+	  X0			  "[0 q20 q30 0 Omega0 0 0 0]"
+	  AbsoluteTolerance	  "auto"
+	  Realization		  "auto"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Moteur 1"
+	  Position		  [215, 51, 260, 89]
+	  BackgroundColor	  "lightBlue"
+	  Gain			  "Km1"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "T1 (N.m)"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Moteur 2"
+	  Position		  [215, 135, 260, 175]
+	  BackgroundColor	  "lightBlue"
+	  Gain			  "Km2"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "T2 (N.m)"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [4, 1]
+	  Position		  [370, 31, 375, 364]
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  Inputs		  "4"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Quantizer
+	  Name			  "Quantification\nCapteurs"
+	  Position		  [665, 185, 695, 215]
+	  BackgroundColor	  "lightBlue"
+	  QuantizationInterval	  "Q"
+	  LinearizeAsGain	  on
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation\nAxe 2\n+/- 120°"
+	  Position		  [590, 185, 620, 215]
+	  BackgroundColor	  "lightBlue"
+	  UpperLimit		  "[inf 120*pi/180*K2 inf inf inf inf inf inf]"
+	  LowerLimit		  "[-inf -120*pi/180*K2 -inf -inf -inf -inf -i"
+"nf -inf]"
+	  LinearizeAsGain	  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Y (counts)"
+	  Position		  [740, 193, 770, 207]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "T1 (V)"
+	  SrcPort		  1
+	  DstBlock		  "Gain \nAmpli1\n en A/V"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Gyro\nState-Space"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain \nAmpli1\n en A/V"
+	  SrcPort		  1
+	  DstBlock		  "Moteur 1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "T2 (N.m)"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Moteur 2"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Gain \nAmpli2 \nen A/V"
+	  SrcPort		  1
+	  DstBlock		  "Moteur 2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gyro\nState-Space"
+	  SrcPort		  1
+	  DstBlock		  "Gains\ncapteurs\nrad -> counts"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "T2 (V)"
+	  SrcPort		  1
+	  DstBlock		  "Gain \nAmpli2 \nen A/V"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "T1 (N.m)"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Moteur 1"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation\nAxe 2\n+/- 120°"
+	  SrcPort		  1
+	  DstBlock		  "Quantification\nCapteurs"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "Quantification\nCapteurs"
+	  SrcPort		  1
+	  DstBlock		  "Y (counts)"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "T3"
+	  Labels		  [1, 0]
+	  SrcBlock		  "T3 (N.m)"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "T4"
+	  Labels		  [1, 0]
+	  SrcBlock		  "T4 (N.m)"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Gains\ncapteurs\nrad -> counts"
+	  SrcPort		  1
+	  DstBlock		  "Saturation\nAxe 2\n+/- 120°"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Gyro non-linéaire"
+      Ports		      [4, 1]
+      Position		      [465, 61, 585, 309]
+      BackgroundColor	      "lightBlue"
+      ShowPortLabels	      on
+      Permissions	      "ReadOnly"
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Gyro non-linéaire"
+	Location		[614, 214, 1323, 615]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "T1 (V)"
+	  Position		  [40, 78, 70, 92]
+	  Port			  "1"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T2 (V)"
+	  Position		  [40, 148, 70, 162]
+	  Port			  "2"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T3 (N.m)"
+	  Position		  [40, 218, 70, 232]
+	  Port			  "3"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T4 (N.m)"
+	  Position		  [40, 288, 70, 302]
+	  Port			  "4"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain \nAmpli1\n en A/V"
+	  Position		  [110, 65, 160, 105]
+	  BackgroundColor	  "lightBlue"
+	  NamePlacement		  "alternate"
+	  Gain			  "Kamp"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain \nAmpli2 \nen A/V"
+	  Position		  [110, 135, 160, 175]
+	  BackgroundColor	  "lightBlue"
+	  Gain			  "Kamp"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain \nCapteurs\nrad -> counts"
+	  Position		  [440, 170, 485, 210]
+	  BackgroundColor	  "lightBlue"
+	  Gain			  "[K1 K2 K3 K4 K1 K2 K3 K4]"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Gyroscope"
+	  Ports			  [1, 1]
+	  Position		  [340, 156, 410, 224]
+	  BackgroundColor	  "lightBlue"
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  System {
+	    Name		    "Gyroscope"
+	    Location		    [520, 483, 1038, 761]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Couples"
+	      Position		      [425, 197, 455, 213]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Port		      "1"
+	      LatchInput	      off
+	      PortDimensions	      "4"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Integrator
+	      Name		      "Integrator1"
+	      Ports		      [1, 1]
+	      Position		      [210, 35, 240, 65]
+	      ShowName		      off
+	      ExternalReset	      "none"
+	      InitialConditionSource  "internal"
+	      InitialCondition	      "[0 q20 q30 0 Omega0 0 0 0]"
+	      LimitOutput	      off
+	      UpperSaturationLimit    "inf"
+	      LowerSaturationLimit    "-inf"
+	      ShowSaturationPort      off
+	      ShowStatePort	      off
+	      AbsoluteTolerance	      "auto"
+	      Port {
+		PortNumber		1
+		Name			"X"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+	      }
+	    }
+	    Block {
+	      BlockType		      MATLABFcn
+	      Name		      "Modèle non linéaire\ndu gyroscope"
+	      Position		      [180, 155, 270, 225]
+	      Orientation	      "left"
+	      MATLABFcn		      "gyro_non_linear"
+	      OutputDimensions	      "8"
+	      OutputSignalType	      "auto"
+	      Output1D		      on
+	      Port {
+		PortNumber		1
+		Name			"X'"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+	      }
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      Ports		      [2, 1]
+	      Position		      [350, 154, 355, 221]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      Inputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "X"
+	      Position		      [425, 43, 455, 57]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      Name		      "X'"
+	      Labels		      [3, 1]
+	      SrcBlock		      "Modèle non linéaire\ndu gyroscope"
+	      SrcPort		      1
+	      Points		      [-140, 0; 0, -140]
+	      DstBlock		      "Integrator1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "X"
+	      Labels		      [2, 1]
+	      SrcBlock		      "Integrator1"
+	      SrcPort		      1
+	      Points		      [0, 0; 135, 0]
+	      Branch {
+		Points			[0, 120]
+		DstBlock		"Mux"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 0]
+		DstBlock		"X"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "Modèle non linéaire\ndu gyroscope"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Couples"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Moteur 1"
+	  Position		  [185, 66, 230, 104]
+	  BackgroundColor	  "lightBlue"
+	  Gain			  "Km1"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "T1 (N.m)"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Moteur 2"
+	  Position		  [185, 135, 230, 175]
+	  BackgroundColor	  "lightBlue"
+	  Gain			  "Km2"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	  Port {
+	    PortNumber		    1
+	    Name		    "T2 (N.m)"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [4, 1]
+	  Position		  [295, 53, 300, 327]
+	  BackgroundColor	  "lightBlue"
+	  ShowName		  off
+	  Inputs		  "4"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Quantizer
+	  Name			  "Quantification\ncapteurs"
+	  Position		  [580, 175, 610, 205]
+	  BackgroundColor	  "lightBlue"
+	  QuantizationInterval	  "Q"
+	  LinearizeAsGain	  on
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation\nAxe 2\n+/- 120°"
+	  Position		  [510, 175, 540, 205]
+	  BackgroundColor	  "lightBlue"
+	  UpperLimit		  "[inf 120*pi/180*K2 inf inf inf inf inf inf]"
+	  LowerLimit		  "[-inf -120*pi/180*K2 -inf -inf -inf -inf -i"
+"nf -inf]"
+	  LinearizeAsGain	  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Y (counts)"
+	  Position		  [645, 183, 675, 197]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "T1 (V)"
+	  SrcPort		  1
+	  DstBlock		  "Gain \nAmpli1\n en A/V"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Gyroscope"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain \nAmpli1\n en A/V"
+	  SrcPort		  1
+	  DstBlock		  "Moteur 1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "T2 (N.m)"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Moteur 2"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Gain \nAmpli2 \nen A/V"
+	  SrcPort		  1
+	  DstBlock		  "Moteur 2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gyroscope"
+	  SrcPort		  1
+	  DstBlock		  "Gain \nCapteurs\nrad -> counts"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "T2 (V)"
+	  SrcPort		  1
+	  DstBlock		  "Gain \nAmpli2 \nen A/V"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "T1 (N.m)"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Moteur 1"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "Quantification\ncapteurs"
+	  SrcPort		  1
+	  DstBlock		  "Y (counts)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "T3 (N.m)"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "T4 (N.m)"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Gain \nCapteurs\nrad -> counts"
+	  SrcPort		  1
+	  DstBlock		  "Saturation\nAxe 2\n+/- 120°"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation\nAxe 2\n+/- 120°"
+	  SrcPort		  1
+	  DstBlock		  "Quantification\ncapteurs"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Sécurités axes 1 et 2"
+      Ports		      [3, 2]
+      Position		      [60, 96, 190, 234]
+      BackgroundColor	      "orange"
+      ShowPortLabels	      on
+      Permissions	      "ReadOnly"
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Sécurités axes 1 et 2"
+	Location		[433, 403, 1003, 804]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "w1 (rad/s)"
+	  Position		  [90, 78, 120, 92]
+	  Port			  "1"
+	  LatchInput		  off
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "w1"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T1 (V)"
+	  Position		  [90, 133, 120, 147]
+	  Port			  "2"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "T2 (V)"
+	  Position		  [90, 263, 120, 277]
+	  Port			  "3"
+	  LatchInput		  off
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation\n+10V / -10V"
+	  Position		  [220, 125, 250, 155]
+	  BackgroundColor	  "orange"
+	  UpperLimit		  "10"
+	  LowerLimit		  "-10"
+	  LinearizeAsGain	  on
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation\n+10V / -10V\n"
+	  Position		  [215, 255, 245, 285]
+	  BackgroundColor	  "orange"
+	  UpperLimit		  "10"
+	  LowerLimit		  "-10"
+	  LinearizeAsGain	  on
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Sécurité \nAmpli 1"
+	  Ports			  [2, 1]
+	  Position		  [310, 58, 420, 167]
+	  BackgroundColor	  "orange"
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  System {
+	    Name		    "Sécurité \nAmpli 1"
+	    Location		    [659, 473, 1359, 869]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "w2"
+	      Position		      [25, 328, 55, 342]
+	      Port		      "1"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "T1"
+	      Position		      [25, 23, 55, 37]
+	      Port		      "2"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Comparaison vitesse maxi"
+	      Position		      [150, 319, 265, 351]
+	      Expr		      "OmegaMax-abs(u)"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      Position		      [510, 140, 540, 170]
+	      Orientation	      "up"
+	      ShowName		      off
+	      Value		      "0"
+	      VectorParams1D	      on
+	    }
+	    Block {
+	      BlockType		      Integrator
+	      Name		      "Integrator"
+	      Ports		      [1, 1]
+	      Position		      [195, 140, 225, 170]
+	      ShowName		      off
+	      ExternalReset	      "none"
+	      InitialConditionSource  "internal"
+	      InitialCondition	      "0"
+	      LimitOutput	      on
+	      UpperSaturationLimit    "limite_ampli+0.1"
+	      LowerSaturationLimit    "0"
+	      ShowSaturationPort      off
+	      ShowStatePort	      off
+	      AbsoluteTolerance	      "auto"
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation\n+/- 3V"
+	      Position		      [195, 230, 225, 260]
+	      UpperLimit	      "limite_ampli"
+	      LowerLimit	      "-limite_ampli"
+	      LinearizeAsGain	      on
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Seuil\ndissipation\nampli"
+	      Position		      [255, 140, 315, 170]
+	      Expr		      "limite_ampli-u"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Seuil\nintégration"
+	      Position		      [100, 140, 160, 170]
+	      Expr		      "abs(u)-seuil_ampli"
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch"
+	      Position		      [390, 23, 420, 77]
+	      Threshold		      "0"
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch1"
+	      Position		      [555, 43, 585, 97]
+	      Threshold		      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "T1 sécurisé"
+	      Position		      [640, 63, 670, 77]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "T1"
+	      SrcPort		      1
+	      Points		      [0, 0; 15, 0]
+	      Branch {
+		DstBlock		"Switch"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 125]
+		Branch {
+		  DstBlock		  "Seuil\nintégration"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 90]
+		  DstBlock		  "Saturation\n+/- 3V"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Saturation\n+/- 3V"
+	      SrcPort		      1
+	      Points		      [135, 0; 0, -175]
+	      DstBlock		      "Switch"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Seuil\ndissipation\nampli"
+	      SrcPort		      1
+	      Points		      [5, 0; 0, -105]
+	      DstBlock		      "Switch"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Integrator"
+	      SrcPort		      1
+	      DstBlock		      "Seuil\ndissipation\nampli"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Seuil\nintégration"
+	      SrcPort		      1
+	      DstBlock		      "Integrator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "w2"
+	      SrcPort		      1
+	      DstBlock		      "Comparaison vitesse maxi"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Switch1"
+	      SrcPort		      1
+	      DstBlock		      "T1 sécurisé"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Switch"
+	      SrcPort		      1
+	      DstBlock		      "Switch1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      Points		      [0, -45]
+	      DstBlock		      "Switch1"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Comparaison vitesse maxi"
+	      SrcPort		      1
+	      Points		      [190, 0; 0, -265]
+	      DstBlock		      "Switch1"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Sécurité \nAmpli 2"
+	  Ports			  [1, 1]
+	  Position		  [310, 252, 420, 288]
+	  BackgroundColor	  "orange"
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  System {
+	    Name		    "Sécurité \nAmpli 2"
+	    Location		    [535, 588, 1135, 939]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "T2"
+	      Position		      [25, 53, 55, 67]
+	      Port		      "1"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Fcn"
+	      Position		      [120, 170, 180, 200]
+	      Expr		      "abs(u)-seuil_ampli"
+	    }
+	    Block {
+	      BlockType		      Integrator
+	      Name		      "Integrator"
+	      Ports		      [1, 1]
+	      Position		      [215, 170, 245, 200]
+	      ShowName		      off
+	      ExternalReset	      "none"
+	      InitialConditionSource  "internal"
+	      InitialCondition	      "0"
+	      LimitOutput	      on
+	      UpperSaturationLimit    "limite_ampli+0.1"
+	      LowerSaturationLimit    "0"
+	      ShowSaturationPort      off
+	      ShowStatePort	      off
+	      AbsoluteTolerance	      "auto"
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation"
+	      Position		      [230, 265, 260, 295]
+	      UpperLimit	      "limite_ampli"
+	      LowerLimit	      "-limite_ampli"
+	      LinearizeAsGain	      on
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Seuil\nDissipation\nAmpli"
+	      Position		      [280, 170, 340, 200]
+	      Expr		      "limite_ampli-u"
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch"
+	      Position		      [465, 53, 495, 107]
+	      Threshold		      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "T2 corrigé"
+	      Position		      [535, 73, 565, 87]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "T2"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      Branch {
+		DstBlock		"Switch"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 125]
+		Branch {
+		  Points		  [0, 0]
+		  DstBlock		  "Fcn"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 95]
+		  DstBlock		  "Saturation"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Switch"
+	      SrcPort		      1
+	      DstBlock		      "T2 corrigé"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Seuil\nDissipation\nAmpli"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, -105]
+	      DstBlock		      "Switch"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Integrator"
+	      SrcPort		      1
+	      DstBlock		      "Seuil\nDissipation\nAmpli"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fcn"
+	      SrcPort		      1
+	      DstBlock		      "Integrator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Saturation"
+	      SrcPort		      1
+	      Points		      [170, 0; 0, -180]
+	      DstBlock		      "Switch"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "T1 (V)\nsécurisé"
+	  Position		  [460, 108, 490, 122]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "T2 (V)\nsécurisé"
+	  Position		  [460, 263, 490, 277]
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Saturation\n+10V / -10V\n"
+	  SrcPort		  1
+	  DstBlock		  "Sécurité \nAmpli 2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "w1"
+	  SrcBlock		  "w1 (rad/s)"
+	  SrcPort		  1
+	  DstBlock		  "Sécurité \nAmpli 1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation\n+10V / -10V"
+	  SrcPort		  1
+	  DstBlock		  "Sécurité \nAmpli 1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sécurité \nAmpli 2"
+	  SrcPort		  1
+	  DstBlock		  "T2 (V)\nsécurisé"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "T2 (V)"
+	  SrcPort		  1
+	  DstBlock		  "Saturation\n+10V / -10V\n"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sécurité \nAmpli 1"
+	  SrcPort		  1
+	  DstBlock		  "T1 (V)\nsécurisé"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "T1 (V)"
+	  SrcPort		  1
+	  DstBlock		  "Saturation\n+10V / -10V"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}
