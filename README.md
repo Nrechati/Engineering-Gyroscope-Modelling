@@ -4,20 +4,27 @@ This project is my work on a use case for **"Robust and Optimal Commands"** as a
 
 ## Abstract
 
-This project asked me and my team to scale a **H∞** command for a Helicopter. The goal was to use our theoretical knowledge upon robust and optimal command in a concrete use case. Through equations and simulation, we tried to find the best parameters for this command but also concluded that even with a great performance against other commands like PI, it came at the cost of great complexity. We also study a **H∞ Loop-Shaping** command as a good *middle point* between a full and complex H∞ command and simpler ones. In the end, this project both learn us how to work with such command, but also that choosing the right command for each use case and ressources system have is also a really important challenge while building an architecture to answer system specifications.
+This project goal was to take the *simple* use case of a gyroscope, scale different controllers such as P, PD, Sliding Mode order 1 & 2 *(Super Twisting Algorithm)*, then benchmark them to end up with the best answer to the specifications. In the end we choose the controller with the best ratio between output precision regarding the instruction and command solicitations.
+
+## Disclaimer
+
+I had some trouble recovering this project report from school, 2 years after graduation. So I know the report is not in the best shape but I still wanted to keep it on this Git to show my work on this specific subject. Moreover, this project was graded largely by our teacher running our simulation and oral defense. Thus, this report is clearly not have a lot of explanations and is more an equation and simulation results showcase than a full engineering report.
 
 ## Summary
 
-### I. Introduction
+### I. Simulink Gyroscope Model
 
-### II. Weighting function method
+- **1. Eigenvalue calculation**
+- **2. Open-Loop Analysis**
+- **3. Proportional controller synthesis**
 
-- **1. Class study validation**
+### II. Non-linear robust command
 
-- **2. Regulator determination by weighting**
-	- A. Weighting functions study
-	- B. Command study
-	- C .Weighting function research
+- **1. *Kp* and *Kd* gains**
+- **2. Result Anaysis**
+- **3. Sine wave response**
+- **4. Sliding Mode order 1**
+- **5. Sliding MOde order 2**
 
 ### III. Conclusion
 
