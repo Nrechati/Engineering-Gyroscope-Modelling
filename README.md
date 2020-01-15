@@ -10,7 +10,7 @@ This project goal was to take the *simple* use case of a gyroscope, scale differ
 
 I had some trouble recovering this project report from school, 2 years after graduation. So I know the report is not in the best shape but I still wanted to keep it on this Git to show my work on this specific subject. Moreover, this project was graded largely by our teacher running our simulation and oral defense. Thus, this report is clearly not have a lot of explanations and is more an equation and simulation results showcase than a full engineering report.
 
-## Summary
+## Table of contents
 
 ### I. Simulink Gyroscope Model
 
